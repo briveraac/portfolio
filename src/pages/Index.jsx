@@ -1,121 +1,111 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+import pythonImg from '../../docs/legacy/assets/imgs/python.png'
+import sqlImg from '../../docs/legacy/assets/imgs/sql.png'
+import jsImg from '../../docs/legacy/assets/imgs/js.svg'
+import htmlImg from '../../docs/legacy/assets/imgs/html.png'
+import cssImg from '../../docs/legacy/assets/imgs/css.png'
 import './Index.css'
 
-function Index() {
-  const [count, setCount] = useState(0)
-  //const CurrentYear = new Date().getFullYear()
+const skills = [
+  { src: pythonImg, alt: 'Python', label: 'Python' },
+  { src: sqlImg, alt: 'SQL', label: 'SQL' },
+  { src: jsImg, alt: 'JavaScript', label: 'JavaScript' },
+  { src: htmlImg, alt: 'HTML', label: 'HTML' },
+  { src: cssImg, alt: 'CSS', label: 'CSS' },
+]
 
+const contactLinks = {
+  direct: [
+    { href: 'mailto:brun.rivera@duocuc.cl', label: 'Email' },
+    {
+      href: 'https://www.linkedin.com/in/bruno-rivera-98038a327/',
+      label: 'LinkedIn',
+    },
+    { href: 'https://github.com/briveraac', label: 'GitHub' },
+  ],
+  social: [
+    {
+      href: 'https://www.instagram.com/saaiiinttt77',
+      label: 'Instagram',
+    },
+    { href: 'https://www.x.com/Rydeiziim', label: 'Twitter' },
+    { href: 'https://wa.me/56951501780', label: 'Whatsapp' },
+  ],
+}
+
+function Index() {
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+      <section id="cv">
+        <div className="main">
+          <section className="izquierda">
+            <div className="foto-placeholder" aria-hidden="true">
+              BR
+            </div>
+            <h1>Bruno Rivera</h1>
+            <ul className="roles">
+              <li>Data Engineer JR.</li>
+              <li>Fullstack Developer JR.</li>
+            </ul>
+          </section>
 
-      <div className="ticks"></div>
+          <section className="derecha">
+            <h4>About me</h4>
+            <p>
+              Soy un estudiante de Ingenieria en informatica en DUOC UC.
+              Actualmente trabajando para KLOG.CO como Data Engineer JR.
+            </p>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+            <h4>Estudios</h4>
+            <ul>
+              <li>Tecnico medio en Programacion - Liceo RBL.</li>
+              <li>Ingenieria en informatica - DUOC UC.</li>
+            </ul>
+          </section>
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      <section id="skills">
+        <h2>Skills</h2>
+        <div className="skills-grid">
+          {skills.map((skill) => (
+            <div className="skill-card" key={skill.label}>
+              <img src={skill.src} alt={skill.alt} />
+              <span>{skill.label}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Si quieres contactarme, puedes hacerlo a través de:</p>
+        <div className="main">
+          <div className="izquierda">
+            <h4>Directo</h4>
+            <ul>
+              {contactLinks.direct.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} target="_blank" rel="noreferrer">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="derecha">
+            <h4>Redes Sociales</h4>
+            <ul>
+              {contactLinks.social.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} target="_blank" rel="noreferrer">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
     </>
   )
 }

@@ -7,7 +7,7 @@ function Layout() {
       <header>
         <nav>
           <NavLink to="/">Inicio</NavLink>
-          <NavLink to="./pages/Contact.jsx">Contacto</NavLink>
+          <NavLink to="/contact">Contacto</NavLink>
         </nav>
       </header>
  
@@ -19,3 +19,5 @@ function Layout() {
     </div>
   );
 }
+
+export default Layout
