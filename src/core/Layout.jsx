@@ -1,6 +1,6 @@
-import { Outlet, NavLink } from 'react-router-dom';
+import { Outlet, NavLink } from 'react-router-dom'
 import Footer from './Footer.jsx'
- 
+
 function Layout() {
   return (
     <div className="app">
@@ -10,14 +10,14 @@ function Layout() {
           <NavLink to="/contact">Contacto</NavLink>
         </nav>
       </header>
- 
+
       <main>
         <Outlet />
       </main>
- 
+
       <Footer />
     </div>
-  );
+  )
 }
 
 export default Layout

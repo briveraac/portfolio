@@ -1,12 +1,11 @@
 function Footer() {
-    const currentYear = new Date().getFullYear();
-    return (
-        <footer>
-            <p>
-                {currentYear}. Brunenger. derechos netos
-            </p>
-        </footer>
-    )
+  const currentYear = new Date().getFullYear()
+
+  return (
+    <footer>
+      <p>&copy; {currentYear} Bruno Rivera. Todos los derechos reservados.</p>
+    </footer>
+  )
 }
 
-export default Footer;
+export default Footer

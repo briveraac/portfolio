@@ -1,10 +1,7 @@
+import ContactSection from '../core/contact/ContactSection.jsx'
+
 function Contact() {
-    return (
-        <div>
-            <h1>contact page</h1>
-            <p>pagina de contacto</p>
-        </div>
-    );
+  return <ContactSection />
 }
 
 export default Contact

@@ -1,17 +1,11 @@
 :root {
   --blue-900: #0a1f3d;
-  --blue-800: #0f2f5c;
   --blue-700: #163d78;
   --blue-500: #2563eb;
-  --blue-400: #3b82f6;
   --blue-100: #dbeafe;
-  --blue-50: #f0f6ff;
-  --text-main: #1e293b;
-  --text-muted: #5b6b82;
   --bg: #f7faff;
-  --card-bg: #ffffff;
+  --text-main: #1e293b;
   --border: #e1e9f7;
-  --radius: 14px;
   --shadow: 0 4px 20px rgba(15, 47, 92, 0.06);
 }
 
@@ -36,7 +30,6 @@ body {
 a {
   color: var(--blue-500);
   text-decoration: none;
-  transition: color 0.2s ease;
 }
 
 a:hover {
@@ -48,17 +41,8 @@ img {
   max-width: 100%;
 }
 
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
-
 #root {
   min-height: 100svh;
-  display: flex;
-  flex-direction: column;
 }
 
 .app {
@@ -74,7 +58,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   gap: 12px;
   position: sticky;
   top: 0;
@@ -91,7 +74,6 @@ header nav {
 header a {
   color: var(--blue-100);
   font-weight: 500;
-  letter-spacing: 0.3px;
 }
 
 header a:hover {
