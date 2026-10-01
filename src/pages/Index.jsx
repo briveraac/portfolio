@@ -1,5 +1,5 @@
 import Main from '../core/Main.jsx'
-import './index.css'
+import './Index.css'
 
 function Index() {
   return <Main />
